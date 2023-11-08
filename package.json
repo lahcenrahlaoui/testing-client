@@ -1,5 +1,5 @@
 {
-    "proxy":"https://testing-mauve-five.vercel.app",
+    
     "name": "client",
     "version": "0.1.0",
     "private": true,
