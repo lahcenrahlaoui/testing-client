@@ -10,7 +10,8 @@ function App() {
             const response = await fetch(`https://testing-mauve-five.vercel.app/api/current_user`);
             console.log(response);
             console.log("/////////////////");
-            console.log(await response.json());
+            const json = await response.json()
+            console.log(json);
         };
         fetchData();
     });
