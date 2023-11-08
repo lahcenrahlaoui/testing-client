@@ -9,6 +9,8 @@ function App() {
             // const ares = await axios.get("/api/current_user");
             const response = await fetch("/api/current_user");
             console.log(response);
+            console.log('/////////////////')
+            console.log(await response.json())
         };
         fetchData();
     });
