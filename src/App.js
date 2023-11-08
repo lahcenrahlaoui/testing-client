@@ -9,7 +9,7 @@ function App() {
                 `https://testing-mauve-five.vercel.app/api/current_user`
             );
             console.log(response);
-            console.log("/////////////////");
+            console.log("/|||||||||||||||||||///");
         };
         fetchData();
     });
