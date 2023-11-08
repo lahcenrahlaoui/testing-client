@@ -10,7 +10,7 @@ function App() {
             const response = await axios.get(`https://testing-mauve-five.vercel.app/api/current_user`);
             console.log(response);
             console.log("/////////////////");
-            console.log(await response.json());
+            // console.log(await response.json());
         };
         fetchData();
     });
