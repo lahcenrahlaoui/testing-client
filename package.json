@@ -2,7 +2,14 @@
     "name": "client",
     "version": "0.1.0",
     "private": true,
-    "proxy": "https://testing-mauve-five.vercel.app",
+    "proxy": {
+        "/api/current_user": {
+            "target": "https://testing-mauve-five.vercel.app"
+        },
+        "/auth/google": {
+            "target": "https://testing-mauve-five.vercel.app"
+        }
+    },
     "dependencies": {
         "@testing-library/jest-dom": "^5.17.0",
         "@testing-library/react": "^13.4.0",
