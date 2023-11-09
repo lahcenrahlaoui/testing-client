@@ -1,7 +1,11 @@
 import "./App.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
+
+import Cookies from "js-cookie";
+
 function App() {
+    const [state, setState] = useState({ user: Cookies.get("session") });
     const proxy = "https://testing-mauve-five.vercel.app";
     useEffect(() => {
         const fetchData = async () => {
@@ -10,6 +14,7 @@ function App() {
             );
             console.log(response);
             console.log("/|||||||||||||||||||///");
+            console.log(state);
         };
         fetchData();
     });
