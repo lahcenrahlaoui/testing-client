@@ -1,11 +1,17 @@
 import "./App.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
+import { withCookies } from "react-cookie";
+import { useCookies } from "react-cookie";
 
 function App() {
+    const [cookies, setCookie] = useState(useCookies(cookies.get("user")));
+
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get(`https://testing-mauve-five.vercel.app/api/current_user`);
+            const response = await axios.get(
+                `https://testing-mauve-five.vercel.app/api/current_user`
+            );
             console.log(response);
             console.log("/||||||||||\\\\\\\\\\\\\\|||///");
         };
@@ -14,10 +20,18 @@ function App() {
 
     return (
         <div className="App">
-            <a href={`https://testing-mauve-five.vercel.app/auth/google`}>login</a>
+            <a href={`https://testing-mauve-five.vercel.app/auth/google`}>
+                login
+            </a>
 
-            <div>---------------</div>
-            <a href={`https://testing-mauve-five.vercel.app/api/logout`}>logout</a>
+            <div>
+                ---------
+                {cookies && <p>{cookies}</p>}
+                ------
+            </div>
+            <a href={`https://testing-mauve-five.vercel.app/api/logout`}>
+                logout
+            </a>
             {/* <a href={`${proxy}/auth/google`}>login</a>
 
             <div>---------------</div>
@@ -26,4 +40,4 @@ function App() {
     );
 }
 
-export default App;
+export default withCookies(App);

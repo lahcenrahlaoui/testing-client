@@ -2,7 +2,7 @@
     "name": "client",
     "version": "0.1.0",
     "private": true,
-    "proxy": "https://testing-mauve-five.vercel.app" ,
+    "proxy": "https://testing-mauve-five.vercel.app",
     "dependencies": {
         "@testing-library/jest-dom": "^5.17.0",
         "@testing-library/react": "^13.4.0",
@@ -10,6 +10,7 @@
         "axios": "^1.6.0",
         "js-cookie": "^3.0.5",
         "react": "^18.2.0",
+        "react-cookie": "^6.1.1",
         "react-dom": "^18.2.0",
         "react-scripts": "5.0.1",
         "web-vitals": "^2.1.4"
