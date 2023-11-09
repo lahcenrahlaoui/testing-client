@@ -1,11 +1,14 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { withCookies } from "react-cookie";
+
 import { useCookies } from "react-cookie";
 
+
+
 function App() {
-    const [cookies, setCookie] = useState(useCookies(cookies.get("user")));
+    const [cookies, setCookie] = useCookies();
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -40,4 +43,4 @@ function App() {
     );
 }
 
-export default withCookies(App);
+export default App;
