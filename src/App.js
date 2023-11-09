@@ -14,7 +14,7 @@ function App() {
                 `https://server-2nfv.onrender.com/api/current_user`
             );
             console.log(response);
-            console.log("/|||||||||||||||||||///");
+            console.log("/||||||||||\\\\\\\\\\\\\\\|||///");
             console.log(state);
         };
         fetchData();
