@@ -14,10 +14,10 @@ function App() {
 
     return (
         <div className="App">
-            <a href={`/auth/google`}>login</a>
+            <a href={`https://testing-mauve-five.vercel.app/auth/google`}>login</a>
 
             <div>---------------</div>
-            <a href={`/api/logout`}>logout</a>
+            <a href={`https://testing-mauve-five.vercel.app/api/logout`}>logout</a>
             {/* <a href={`${proxy}/auth/google`}>login</a>
 
             <div>---------------</div>
