@@ -33,7 +33,10 @@ function App() {
             <a href={`${proxy}/auth/google`}>login</a>
 
             <div>---------------</div>
-            <GoogleLoginButton onClick={() => alert("Hello")} />
+            <GoogleLoginButton
+                href={`${proxy}/auth/google`}
+                onClick={() => console.log("Hello")}
+            />
             <div>---------------</div>
             <a href={`${proxy}/api/logout`}>logout</a>
         </div>
