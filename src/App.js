@@ -5,7 +5,7 @@ import axios from "axios";
 function App() {
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get(`/api/current_user`);
+            const response = await axios.get(`https://testing-mauve-five.vercel.app/api/current_user`);
             console.log(response);
             console.log("/||||||||||\\\\\\\\\\\\\\|||///");
         };
