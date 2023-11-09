@@ -4,6 +4,8 @@ import axios from "axios";
 
 import Cookies from "js-cookie";
 
+import { GoogleLoginButton } from "react-social-login-buttons";
+
 function App() {
     const [state, setState] = useState({ user: Cookies.get("session") });
     const proxy = "https://testing-mauve-five.vercel.app";
@@ -19,9 +21,19 @@ function App() {
         fetchData();
     });
 
+    const googleSuccess = (res) => {
+        console.log(res);
+    };
+    const googleFailure = () => {
+        console.log("fail");
+    };
+
     return (
         <div className="App">
             <a href={`${proxy}/auth/google`}>login</a>
+
+            <div>---------------</div>
+            <GoogleLoginButton onClick={() => alert("Hello")} />
             <div>---------------</div>
             <a href={`${proxy}/api/logout`}>logout</a>
         </div>
