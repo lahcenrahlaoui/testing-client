@@ -1,19 +1,14 @@
 import "./App.css";
 import { useEffect } from "react";
 import axios from "axios";
-import { useCookies } from "react-cookie";
 
 function App() {
-    const [cookie, setCookie] = useCookies(['session' ])
-
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get(
-                `https://testing-mauve-five.vercel.app/api/current_user`
-            );
-           
+            const response = await axios.get(`/api/current_user`);
+
             console.log(response);
-            console.log("/|||----------|||///");
+            console.log("/*******************//");
         };
         fetchData();
     });
