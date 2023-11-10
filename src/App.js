@@ -5,7 +5,7 @@ import axios from "axios";
 function App() {
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch("https://testing-mauve-five.vercel.app/api/current_user", {
+            const response = await fetch("https://testing-mauve-five.vercel.app/api/current_user ", {
                 method: "GET",
                 mode: "cors",
                 cache: "no-cache",
