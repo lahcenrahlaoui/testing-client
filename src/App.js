@@ -5,7 +5,15 @@ import axios from "axios";
 function App() {
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get(`https://testing-mauve-five.vercel.app/api/current_user`);
+            const response = await fetch("http://localhost:5000/auth/user", {
+                method: "GET",
+                mode: "cors",
+                cache: "no-cache",
+                credentials: "same-origin",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
 
             console.log(response);
             console.log("/*******************//");
