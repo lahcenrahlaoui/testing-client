@@ -17,6 +17,7 @@ function App() {
 
             console.log(response);
             console.log("/*******************//");
+            console.log("/*******************//");
             console.log(await response.json());
             console.log("/*******************//");
         };
