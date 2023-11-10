@@ -4,7 +4,7 @@ import axios from "axios";
 import { useCookies } from "react-cookie";
 
 function App() {
-    const [cookie, setCookie, removeCookie] = useCookies([""]);
+    const [cookie, setCookie] = useCookies(['access_token', 'refresh_token'])
 
     useEffect(() => {
         const fetchData = async () => {
@@ -12,9 +12,9 @@ function App() {
                 `https://testing-mauve-five.vercel.app/api/current_user`
             );
             console.log(cookie);
-            console.log("/||||||||||\\\\\\\\\\\\\\|||///");
+            console.log("/-------------------------///");
             console.log(response);
-            console.log("/||||||||||\\\\\\\\\\\\\\|||///");
+            console.log("/|||----------|||///");
         };
         fetchData();
     });
