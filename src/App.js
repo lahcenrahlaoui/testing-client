@@ -15,7 +15,7 @@ function App() {
                 },
             });
 
-            console.log(response);
+            console.log(await response.json());
             console.log("/*******************//");
         };
         fetchData();
