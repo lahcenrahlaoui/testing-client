@@ -1,15 +1,8 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 
-import { useCookies } from "react-cookie";
-
-
-
 function App() {
-    const [cookies, setCookie] = useCookies();
-
-
     useEffect(() => {
         const fetchData = async () => {
             const response = await axios.get(
@@ -27,11 +20,7 @@ function App() {
                 login
             </a>
 
-            <div>
-                ---------
-                {cookies && <p>{cookies}</p>}
-                ------
-            </div>
+            <div>--------- ------</div>
             <a href={`https://testing-mauve-five.vercel.app/api/logout`}>
                 logout
             </a>
