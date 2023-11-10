@@ -4,7 +4,7 @@ import axios from "axios";
 import { useCookies } from "react-cookie";
 
 function App() {
-    const [cookie, setCookie] = useCookies(['access_token', 'refresh_token'])
+    const [cookie, setCookie] = useCookies(['session' ])
 
     useEffect(() => {
         const fetchData = async () => {
