@@ -11,8 +11,7 @@ function App() {
             const response = await axios.get(
                 `https://testing-mauve-five.vercel.app/api/current_user`
             );
-            console.log(cookie);
-            console.log("/-------------------------///");
+           
             console.log(response);
             console.log("/|||----------|||///");
         };
