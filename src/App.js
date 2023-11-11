@@ -30,11 +30,15 @@ function App() {
     const [user, setUser] = useState();
     useEffect(() => {
         const fetchUser = async () => {
-            const response = await axios.get(`https://testing-mauve-five.vercel.app/api/current_user`, {
-                withCredentials: true,
-            });
+            const response = await axios.get(
+                `https://testing-mauve-five.vercel.app/api/current_user`,
+                {
+                    withCredentials: true,
+                }
+            );
 
             setUser(response.data);
+            console.log(response.data);
         };
         fetchUser();
     }, []);
