@@ -45,7 +45,7 @@ function App() {
 
     return (
         <div className="App">
-            {user ? (
+            {!user ? (
                 <a
                     href={`https://testing-mauve-five.vercel.app/auth/google`}
                     className="waves-effect waves-light btn"
