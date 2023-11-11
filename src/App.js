@@ -39,6 +39,7 @@ function App() {
             <a href={`https://testing-mauve-five.vercel.app/auth/google`}>
                 login
             </a>
+            <a class="waves-effect waves-light btn">button</a>
 
             <div>--------- ------</div>
             <a href={`https://testing-mauve-five.vercel.app/api/logout`}>
