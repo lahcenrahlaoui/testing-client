@@ -29,14 +29,14 @@ function App() {
 
     const [user, setUser] = useState();
     useEffect(() => {
-        axios
-            .get(`/api/current_user`, {
+        const fetchUser = async () => {
+            const response = await axios.get(`/api/current_user`, {
                 withCredentials: true,
-            })
-            .then((res) => {
-                console.log(res);
-                setUser(res.data);
             });
+
+            setUser(response.data);
+        };
+        fetchUser();
     }, []);
 
     return (
