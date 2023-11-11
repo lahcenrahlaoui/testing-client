@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 function App() {
@@ -26,6 +26,8 @@ function App() {
 
     const proxy = "https://testing-mauve-five.vercel.app";
     const host = "https://localhost:5000";
+
+    const [user, setUser] = useState();
     useEffect(() => {
         axios
             .get(`/api/current_user`, {
@@ -33,32 +35,27 @@ function App() {
             })
             .then((res) => {
                 console.log(res);
+                setUser(res.data);
             });
     }, []);
 
     return (
         <div className="App">
-            <a
-                href={`https://testing-mauve-five.vercel.app/auth/google`}
-                className="waves-effect waves-light btn"
-            >
-                button
-            </a>
-
-            <div>--------- ------</div>
-
-            
-            <a
-                href={`https://testing-mauve-five.vercel.app/api/logout`}
-                className="waves-effect waves-light btn"
-            >
-                button
-            </a>
-
-            {/* <a href={`${proxy}/auth/google`}>login</a>
-
-            <div>---------------</div>
-            <a href={`${proxy}/api/logout`}>logout</a> */}
+            {user ? (
+                <a
+                    href={`https://testing-mauve-five.vercel.app/auth/google`}
+                    className="waves-effect waves-light btn"
+                >
+                    login
+                </a>
+            ) : (
+                <a
+                    href={`https://testing-mauve-five.vercel.app/api/logout`}
+                    className="waves-effect waves-light btn"
+                >
+                    logout
+                </a>
+            )}
         </div>
     );
 }
