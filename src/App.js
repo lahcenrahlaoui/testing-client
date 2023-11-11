@@ -38,15 +38,23 @@ function App() {
 
     return (
         <div className="App">
-            <a href={`https://testing-mauve-five.vercel.app/auth/google`}>
-                login
+            <a
+                href={`https://testing-mauve-five.vercel.app/auth/google`}
+                className="waves-effect waves-light btn"
+            >
+                button
             </a>
-            <a className="waves-effect waves-light btn">button</a>
 
             <div>--------- ------</div>
-            <a href={`https://testing-mauve-five.vercel.app/api/logout`}>
-                logout
+
+            
+            <a
+                href={`https://testing-mauve-five.vercel.app/api/logout`}
+                className="waves-effect waves-light btn"
+            >
+                button
             </a>
+
             {/* <a href={`${proxy}/auth/google`}>login</a>
 
             <div>---------------</div>
