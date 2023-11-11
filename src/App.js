@@ -3,26 +3,36 @@ import { useEffect } from "react";
 import axios from "axios";
 
 function App() {
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch("https://testing-mauve-five.vercel.app/api/current_user ", {
-                method: "GET",
-                mode: "cors",
-                cache: "no-cache",
-                credentials: "same-origin",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            });
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         const response = await fetch("https://testing-mauve-five.vercel.app/api/current_user ", {
+    //             method: "GET",
+    //             mode: "cors",
+    //             cache: "no-cache",
+    //             credentials: "same-origin",
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //             },
+    //         });
 
-            console.log(response);
-            console.log("/*******************//");
-            console.log("/*******************//");
-            console.log(await response.json());
-            console.log("/*******************//");
-        };
-        fetchData();
-    });
+    //         console.log(response);
+    //         console.log("/*******************//");
+    //         console.log("/*******************//");
+    //         console.log(await response.json());
+    //         console.log("/*******************//");
+    //     };
+    //     fetchData();
+    // });
+
+    useEffect(() => {
+        axios
+            .get("https://testing-mauve-five.vercel.app/api/current_user", {
+                withCredentials: true,
+            })
+            .then((res) => {
+                console.log(res);
+            });
+    }, []);
 
     return (
         <div className="App">
