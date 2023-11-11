@@ -24,9 +24,11 @@ function App() {
     //     fetchData();
     // });
 
+    const proxy = "https://testing-mauve-five.vercel.app";
+    const host = "https://localhost:5000";
     useEffect(() => {
         axios
-            .get("https://testing-mauve-five.vercel.app/api/current_user", {
+            .get(`/api/current_user`, {
                 withCredentials: true,
             })
             .then((res) => {
@@ -39,7 +41,7 @@ function App() {
             <a href={`https://testing-mauve-five.vercel.app/auth/google`}>
                 login
             </a>
-            <a class="waves-effect waves-light btn">button</a>
+            <a className="waves-effect waves-light btn">button</a>
 
             <div>--------- ------</div>
             <a href={`https://testing-mauve-five.vercel.app/api/logout`}>
