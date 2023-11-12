@@ -12,14 +12,14 @@ const Header = ({ user }) => {
                     <li>
                         {!user ? (
                             <a
-                                href={`https://testing-mauve-five.vercel.app/auth/google`}
+                                href={`https://localhost:5000/auth/google`}
                                 className="waves-effect waves-light btn"
                             >
                                 login
                             </a>
                         ) : (
                             <a
-                                href={`https://testing-mauve-five.vercel.app/api/logout`}
+                                href={`https://localhost:5000/api/logout`}
                                 className="waves-effect waves-light btn"
                             >
                                 logout
