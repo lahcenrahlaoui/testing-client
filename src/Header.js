@@ -51,9 +51,7 @@
 
 import React from "react";
 
-const Header = ({ user }) => {
-    const proxy = "https://testing-mauve-five.vercel.app";
-    const local = "https://localhost:5000";
+const Header = ({ user, server }) => {
     return (
         <nav>
             <div className="nav-wrapper">
@@ -80,22 +78,14 @@ const Header = ({ user }) => {
                     <li>
                         {!user ? (
                             <a
-                                href={`${
-                                    process.env.NODE_ENV === "production"
-                                        ? proxy
-                                        : local
-                                }/auth/google`}
+                                href={`${server}/auth/google`}
                                 className="waves-effect waves-light btn"
                             >
                                 login
                             </a>
                         ) : (
                             <a
-                                href={`${
-                                    process.env.NODE_ENV === "production"
-                                        ? proxy
-                                        : local
-                                }/api/logout`}
+                                href={`${server}/api/logout`}
                                 className="waves-effect red accent-2 btn"
                             >
                                 logout

@@ -3,6 +3,11 @@ import axios from "axios";
 
 import Header from "./Header";
 function App() {
+    const proxy = "https://testing-mauve-five.vercel.app";
+    const local = "https://localhost:5000";
+
+    const server = process.env.NODE_ENV === "production" ? proxy : local;
+
     console.log(process.env.NODE_ENV);
     const [user, setUser] = useState();
     useEffect(() => {
@@ -29,7 +34,7 @@ function App() {
 
     return (
         <div className="App">
-            <Header user={user} />
+            <Header user={user} server={server} />
         </div>
     );
 }
