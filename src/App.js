@@ -6,17 +6,24 @@ function App() {
     const [user, setUser] = useState();
     useEffect(() => {
         const fetchUser = async () => {
-            const response = await axios.get(
-                // `https://testing-mauve-five.vercel.app/api/current_user`,
-                `/api/current_user`,
-                {
+            let response;
+            if (process.env.NODE_ENV === "development") {
+                response = await axios.get(`/api/current_user`, {
                     withCredentials: true,
-                }
-            );
+                });
+            } else {
+                response = await axios.get(
+                    `https://testing-mauve-five.vercel.app/api/current_user`,
+                    {
+                        withCredentials: true,
+                    }
+                );
+            }
 
             setUser(response.data);
             console.log(response.data);
         };
+
         fetchUser();
     }, []);
 
