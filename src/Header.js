@@ -15,7 +15,7 @@ const Header = ({ user }) => {
                             <li>
                                 <img
                                     className="circle responsive-img"
-                                    src={user.photo}
+                                    src={user.photos}
                                 />
                             </li>
                             <li>
