@@ -10,7 +10,7 @@ function App() {
     useEffect(() => {
         const fetchUser = async () => {
             const response = await axios.get(
-                `https://localhost:5000/api/current_user`,
+                `/api/current_user`,
                 {
                     withCredentials: true,
                 }
