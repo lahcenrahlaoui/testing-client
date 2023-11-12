@@ -25,7 +25,7 @@ function App() {
 
     return (
         <div className="App">
-            <Header />
+            <Header user={user} />
             {!user ? (
                 <a
                     href={`https://testing-mauve-five.vercel.app/auth/google`}
