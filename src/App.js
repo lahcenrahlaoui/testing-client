@@ -2,28 +2,8 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import Header from "./Header";
 function App() {
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         const response = await fetch("https://testing-mauve-five.vercel.app/api/current_user ", {
-    //             method: "GET",
-    //             mode: "cors",
-    //             cache: "no-cache",
-    //             credentials: "same-origin",
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //             },
-    //         });
-
-    //         console.log(response);
-    //         console.log("/*******************//");
-    //         console.log("/*******************//");
-    //         console.log(await response.json());
-    //         console.log("/*******************//");
-    //     };
-    //     fetchData();
-    // });
-
     const proxy = "https://testing-mauve-five.vercel.app";
     const host = "https://localhost:5000";
 
@@ -45,6 +25,7 @@ function App() {
 
     return (
         <div className="App">
+            <Header />
             {!user ? (
                 <a
                     href={`https://testing-mauve-five.vercel.app/auth/google`}
