@@ -3,14 +3,12 @@ import axios from "axios";
 
 import Header from "./Header";
 function App() {
-    const proxy = "https://testing-mauve-five.vercel.app";
-    const host = "https://localhost:5000";
-
     const [user, setUser] = useState();
     useEffect(() => {
         const fetchUser = async () => {
             const response = await axios.get(
-                `https://testing-mauve-five.vercel.app/api/current_user`,
+                // `https://testing-mauve-five.vercel.app/api/current_user`,
+                `/api/current_user`,
                 {
                     withCredentials: true,
                 }
