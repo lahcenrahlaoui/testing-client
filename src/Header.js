@@ -14,7 +14,7 @@ const Header = ({ user }) => {
                         <>
                             <li>
                                 <img
-                                    width={20}
+                                    width={200}
                                     className="circle "
                                     src={user.photos}
                                 />
