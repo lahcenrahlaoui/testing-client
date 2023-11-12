@@ -10,7 +10,7 @@ function App() {
     useEffect(() => {
         const fetchUser = async () => {
             const response = await axios.get(
-                `/api/current_user`,
+                `https://testing-mauve-five.vercel.app/api/current_user`,
                 {
                     withCredentials: true,
                 }
