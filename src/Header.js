@@ -8,7 +8,7 @@ const Header = ({ user }) => {
                     Logo
                 </a>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li>{!user ? "" : <div>username</div>}</li>
+                    <li>{!user ? "" : <div>{user.name}</div>}</li>
                     <li>
                         {!user ? (
                             <a
