@@ -12,8 +12,7 @@ function App() {
     useEffect(() => {
         const fetchUser = async () => {
             let response;
-            
-            
+
             if (process.env.NODE_ENV === "development") {
                 response = await axios.get(`/api/current_user`);
             } else {
