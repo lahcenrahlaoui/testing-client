@@ -3,6 +3,7 @@ import axios from "axios";
 
 import Header from "./Header";
 function App() {
+    console.log(process.env.NODE_ENV);
     const [user, setUser] = useState();
     useEffect(() => {
         const fetchUser = async () => {
@@ -21,7 +22,6 @@ function App() {
             }
 
             setUser(response.data);
-            console.log(response.data);
         };
 
         fetchUser();
