@@ -1,2 +1,2 @@
-export const FETCH_USER = "fetchUser";
+export const GET_USER = "getUser";
 export const LOGOUT = "logout";

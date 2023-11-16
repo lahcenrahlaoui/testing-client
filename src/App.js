@@ -1,9 +1,10 @@
+import { Suspense, lazy } from "react";
 import { useEffect } from "react";
 
-import Header from "./Header";
-
 import { useDispatch, useSelector } from "react-redux";
-import { getUser } from "./actions/getUser";
+
+import getUser from "./actions/getUser";
+const Header = lazy(() => import("./Header"));
 
 function App() {
     const proxy = "https://testing-mauve-five.vercel.app";
@@ -11,15 +12,17 @@ function App() {
 
     const server = process.env.NODE_ENV === "production" ? proxy : local;
 
-    const user = useSelector((state) => state.user);
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getUser());
     }, [dispatch]);
+    const user = useSelector((state) => state.user);
 
     return (
         <div className="App">
-            <Header user={user} server={server} />
+            <Suspense fallback={<div>Loading...</div>}>
+                <Header user={user} server={server} />
+            </Suspense>
         </div>
     );
 }
