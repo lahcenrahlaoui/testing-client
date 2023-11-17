@@ -1,10 +1,14 @@
-import { Suspense, lazy } from "react";
 import { useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 
+import { Routes, Route, Link } from "react-router-dom";
+
 import getUser from "./actions/getUser";
-const Header = lazy(() => import("./Header"));
+
+import Header from "./Header";
+import Post from "./PostForm";
+import PostList from "./PostList";
 
 function App() {
     const proxy = "https://testing-mauve-five.vercel.app";
@@ -20,9 +24,26 @@ function App() {
 
     return (
         <div className="App">
-            <Suspense fallback={<div>Loading...</div>}>
-                <Header user={user} server={server} />
-            </Suspense>
+            <Header user={user} server={server} />
+
+            <Routes>
+                {/* <Route path="/" exact element={<Post />} /> */}
+
+                <Route
+                    path="/create"
+                    exact 
+                    element={
+                        <div
+                            style={{
+                                margin: "30px",
+                            }}
+                        >
+                            <PostList />
+                            <Post />
+                        </div>
+                    }
+                />
+            </Routes>
         </div>
     );
 }
