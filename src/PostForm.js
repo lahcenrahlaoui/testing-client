@@ -12,21 +12,21 @@ const PostForm = () => {
     const user = useSelector((state) => state.user);
 
     const onSubmit = (e) => {
-        e.preventDefault();
-        const postData = async () => {
-            const res = await axios.post("/api/createPost", {
-                title,
-                content,
-                tags,
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json;charset=UTF-8",
-                },
-            });
+        // e.preventDefault();
+        // const postData = async () => {
+        //     const res = await axios.post("/api/createPost", {
+        //         title,
+        //         content,
+        //         tags,
+        //         headers: {
+        //             Accept: "application/json",
+        //             "Content-Type": "application/json;charset=UTF-8",
+        //         },
+        //     });
            
-            dispatch(getPosts());
-        };
-        postData();
+        //     dispatch(getPosts());
+        // };
+        // postData();
     };
 
     return user === null ? (
