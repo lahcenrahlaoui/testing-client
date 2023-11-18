@@ -13,7 +13,7 @@ const getPosts = (state = [], action) => {
             return action.payload || false;
 
         default:
-            return state;
+            return;
     }
 };
 
