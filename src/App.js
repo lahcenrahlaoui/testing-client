@@ -7,7 +7,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import getUser from "./actions/getUser";
 
 import Header from "./Header";
-import Post from "./PostForm";
+import PostForm from "./PostForm";
 import PostList from "./PostList";
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
                             }}
                         >
                             <PostList />
-                            <Post />
+                            <PostForm />
                         </div>
                     }
                 />

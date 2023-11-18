@@ -3,7 +3,7 @@ import Post from "./Post";
 import { useEffect } from "react";
 import getPosts from "./actions/getPosts";
 
-const PostList = () => {
+const PostList = ({ user }) => {
     const posts = useSelector((state) => state.posts);
 
     const dispatch = useDispatch();
@@ -11,9 +11,15 @@ const PostList = () => {
         dispatch(getPosts());
     }, [dispatch]);
 
-    const renderPosts = posts.map((post) => {
-        return <Post key={post._id} post={post} />;
-    });
+    let renderPosts;
+
+    console.log("posts");
+    console.log(posts);
+    if (typeof posts !== "string") {
+        renderPosts = posts.map((post) => {
+            return <Post key={post._id} post={post} />;
+        });
+    }
 
     return (
         <div

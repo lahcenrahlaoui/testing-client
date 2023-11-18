@@ -19,7 +19,6 @@ const Header = ({ user, server }) => {
                     </li>
 
                     <li>
-                        
                         {user === null ? (
                             ""
                         ) : !user ? (
@@ -44,9 +43,7 @@ const Header = ({ user, server }) => {
             </div>
 
             <div className="blue-text  ">
-                <div className="blue-text text-darken-2 container ">
-                  . 
-                </div>
+                <div className="blue-text text-darken-2 container ">.</div>
             </div>
         </nav>
     );
