@@ -1,6 +1,6 @@
 import axios from "axios";
 import { GET_POSTS } from "../constants/types";
-const getUser = () => async (dispatch) => {
+const getPosts = () => async (dispatch) => {
     let response;
     if (process.env.NODE_ENV === "development") {
         response = await axios.get(`/api/posts`);
@@ -13,13 +13,10 @@ const getUser = () => async (dispatch) => {
         );
     }
 
-    console.log("d")
-    console.log(response)
-
     dispatch({
         type: GET_POSTS,
         payload: response.data,
     });
 };
 
-export default getUser;
+export default getPosts;

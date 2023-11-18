@@ -16,12 +16,12 @@ function App() {
 
     const server = process.env.NODE_ENV === "production" ? proxy : local;
 
-    console.log("asdfsadfasdfasdf")
+    console.log("asdfsadfasdfasdf");
     const dispatch = useDispatch();
+    const user = useSelector((state) => state.user);
     useEffect(() => {
         dispatch(getUser());
     }, [dispatch]);
-    const user = useSelector((state) => state.user);
 
     return (
         <div className="App">
@@ -32,7 +32,7 @@ function App() {
 
                 <Route
                     path="/create"
-                    exact 
+                    exact
                     element={
                         <div
                             style={{
