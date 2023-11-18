@@ -13,8 +13,6 @@ const getUser = () => async (dispatch) => {
         );
     }
 
-    console.log(response);
-
     dispatch({
         type: GET_USER,
         payload: response.data,

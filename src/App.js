@@ -16,7 +16,6 @@ function App() {
 
     const server = process.env.NODE_ENV === "production" ? proxy : local;
 
-    console.log("asdfsadfasdfasdf");
     const dispatch = useDispatch();
     const user = useSelector((state) => state.user);
     useEffect(() => {
@@ -40,7 +39,7 @@ function App() {
                             }}
                         >
                             <PostList />
-                            <PostForm   />
+                            <PostForm />
                         </div>
                     }
                 />
