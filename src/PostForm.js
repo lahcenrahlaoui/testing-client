@@ -3,9 +3,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import getPosts from "./actions/getPosts";
 
-const PostForm = () => {
-    const user = useSelector((state) => state.user);
-
+const PostForm = ({ user }) => {
     const [title, setTitle] = useState("");
     const [content, setCotent] = useState("");
     const [tags, setTags] = useState("");
