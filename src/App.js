@@ -30,7 +30,7 @@ function App() {
             <Routes>
                 {/* <Route path="/" exact element={<Post />} /> */}
 
-                <Route
+                {/* <Route
                     path="/create"
                     exact
                     element={
@@ -43,7 +43,7 @@ function App() {
                             <PostForm />
                         </div>
                     }
-                />
+                /> */}
             </Routes>
         </div>
     );
