@@ -13,8 +13,6 @@ const PostList = ({ user }) => {
 
     let renderPosts;
 
-    console.log("posts");
-    console.log(posts);
     if (typeof posts !== "string") {
         renderPosts = posts.map((post) => {
             return <Post key={post._id} post={post} />;

@@ -16,6 +16,7 @@ function App() {
 
     const server = process.env.NODE_ENV === "production" ? proxy : local;
 
+    console.log("asdfsadfasdfasdf")
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getUser());
