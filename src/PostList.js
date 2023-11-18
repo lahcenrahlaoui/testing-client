@@ -11,9 +11,6 @@ const PostList = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getPosts());
-        console.log("-------------- inside -------------");
-        console.log(getPosts);
-        console.log("-------------- inside -------------");
     }, [dispatch]);
 
     let renderPosts;

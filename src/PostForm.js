@@ -7,7 +7,7 @@ const PostForm = () => {
     const [title, setTitle] = useState("");
     const [content, setCotent] = useState("");
     const [tags, setTags] = useState("");
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
     const user = useSelector((state) => state.user);
 
