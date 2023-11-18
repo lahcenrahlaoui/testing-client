@@ -3,7 +3,9 @@ import Post from "./Post";
 import { useEffect } from "react";
 import getPosts from "./actions/getPosts";
 
-const PostList = ({ user }) => {
+const PostList = () => {
+    const user = useSelector((state) => state.user);
+
     const posts = useSelector((state) => state.posts);
 
     const dispatch = useDispatch();
@@ -26,6 +28,7 @@ const PostList = ({ user }) => {
                 flexWrap: "wrap",
             }}
         >
+            {JSON.stringify(user)}
             {renderPosts}
         </div>
     );

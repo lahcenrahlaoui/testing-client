@@ -39,8 +39,8 @@ function App() {
                                 margin: "30px",
                             }}
                         >
-                            <PostList user={user} />
-                            <PostForm user={user} />
+                            <PostList />
+                            <PostForm   />
                         </div>
                     }
                 />

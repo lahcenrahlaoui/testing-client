@@ -3,13 +3,15 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import getPosts from "./actions/getPosts";
 
-const PostForm = ({ user }) => {
+const PostForm = () => {
     const [title, setTitle] = useState("");
     const [content, setCotent] = useState("");
     const [tags, setTags] = useState("");
     const dispatch = useDispatch();
 
-    const onSubmitf = (e) => {
+    const user = useSelector((state) => state.user);
+
+    const onSubmit = (e) => {
         e.preventDefault();
         const postData = async () => {
             const res = await axios.post("/api/createPost", {
@@ -32,7 +34,7 @@ const PostForm = ({ user }) => {
     ) : !user ? (
         "you need to login "
     ) : (
-        <form onSubmit={onSubmitf}>
+        <form onSubmit={onSubmit}>
             <label>title</label>
             <input value={title} onChange={(e) => setTitle(e.target.value)} />
 
