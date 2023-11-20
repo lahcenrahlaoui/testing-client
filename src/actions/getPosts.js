@@ -1,16 +1,14 @@
 import axios from "axios";
-import { GET_POSTS } from "../constants/types";
+import { GET_POSTS, baseURL } from "../constants/types";
+
 const getPosts = () => async (dispatch) => {
     let response;
     if (process.env.NODE_ENV === "development") {
         response = await axios.get(`/api/posts`);
     } else {
-        response = await axios.get(
-            `https://testing-mauve-five.vercel.app/api/posts`,
-            {
-                withCredentials: true,
-            }
-        );
+        response = await axios.get(`${baseURL}/api/posts`, {
+            withCredentials: true,
+        });
     }
 
     dispatch({
