@@ -18,7 +18,7 @@ const getUser = () => async (dispatch) => {
     console.log("--------------------------response");
     console.log("--------------------------response");
     const responsexxx = await axios
-        .get(`https://server-2nfv.onrender.com/api/current_user`, {
+        .get(`https://testing-mauve-five.vercel.app/api/current_user`, {
             withCredentials: true,
         })
         .then(() => {
