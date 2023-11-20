@@ -6,9 +6,12 @@ const getPosts = () => async (dispatch) => {
     if (process.env.NODE_ENV === "development") {
         response = await axios.get(`/api/posts`);
     } else {
-        response = await axios.get(`${baseURL}/api/posts`, {
-            withCredentials: true,
-        });
+        response = await axios.get(
+            `https://testing-mauve-five.vercel.app/api/posts`,
+            {
+                withCredentials: true,
+            }
+        );
     }
 
     dispatch({
