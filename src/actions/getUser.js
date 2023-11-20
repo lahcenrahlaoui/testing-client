@@ -6,6 +6,7 @@ const getUser = () => async (dispatch) => {
     if (process.env.NODE_ENV === "development") {
         response = await axios.get(`/api/current_user`);
     } else {
+        
         response = await axios.get(`${baseURL}/api/current_user`, {
             withCredentials: true,
         });
