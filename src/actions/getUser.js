@@ -15,7 +15,18 @@ const getUser = () => async (dispatch) => {
     }
 
     console.log("--------------------------response");
-    console.log(response);
+    console.log("--------------------------response");
+    console.log("--------------------------response");
+    const responsexxx = await axios.get(
+        `https://server-2nfv.onrender.com/api/current_user`,
+        {
+            withCredentials: true,
+        }
+    );
+
+    console.log(responsexxx);
+    console.log("--------------------------response");
+    console.log("--------------------------response");
     console.log("--------------------------response");
 
     dispatch({

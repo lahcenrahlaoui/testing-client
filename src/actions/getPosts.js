@@ -13,6 +13,7 @@ const getPosts = () => async (dispatch) => {
             }
         );
     }
+    
 
     dispatch({
         type: GET_POSTS,
