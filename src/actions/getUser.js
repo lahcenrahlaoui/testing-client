@@ -7,7 +7,7 @@ const getUser = () => async (dispatch) => {
         response = await axios.get(`/api/current_user`);
     } else {
         
-        response = await axios.get(`${baseURL}/api/current_user`, {
+        response = await axios.get(`https://server-2nfv.onrender.com/api/current_user`, {
             withCredentials: true,
         });
     }
