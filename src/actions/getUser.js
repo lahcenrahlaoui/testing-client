@@ -7,7 +7,10 @@ const getUser = () => async (dispatch) => {
         response = await axios.get(`/api/current_user`);
     } else {
         response = await axios.get(
-            `https://testing-mauve-five.vercel.app/api/current_user`
+            `https://testing-mauve-five.vercel.app/api/current_user`,
+            {
+                withCredentials: true,
+            }
         );
     }
 
