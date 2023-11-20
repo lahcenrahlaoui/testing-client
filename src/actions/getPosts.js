@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_POSTS, baseURL } from "../constants/types";
+import { GET_POSTS } from "../constants/types";
 
 const getPosts = () => async (dispatch) => {
     let response;
@@ -7,7 +7,7 @@ const getPosts = () => async (dispatch) => {
         response = await axios.get(`/api/posts`);
     } else {
         response = await axios.get(
-            `https://testing-mauve-five.vercel.app/api/posts`,
+            `https://testing-mauve-five.vercel.app/api/posts `,
             {
                 withCredentials: true,
             }

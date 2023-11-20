@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_USER, baseURL } from "../constants/types";
+import { GET_USER } from "../constants/types";
 const getUser = () => async (dispatch) => {
     let response;
 
