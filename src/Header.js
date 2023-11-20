@@ -24,23 +24,12 @@ const Header = ({ user, server }) => {
                         {user === null ? (
                             ""
                         ) : !user ? (
-                            // <a
-                            //     href={`${server}/auth/google`}
-                            //     className="waves-effect waves-light btn"
-                            // >
-                            //     Login
-                            // </a>
-                            <GoogleLogin
-                                clientId="1062226768846-jv1shb277i33rc1iqe2mmejp6kp3btth.apps.googleusercontent.com"
-                                render={() => (
-                                    <a
-                                        href={`${server}/auth/google`}
-                                        className="waves-effect waves-light btn"
-                                    >
-                                        Login
-                                    </a>
-                                )}
-                            />
+                            <a
+                                href={`${server}/auth/google`}
+                                className="waves-effect waves-light btn"
+                            >
+                                Login
+                            </a>
                         ) : (
                             <>
                                 <a
