@@ -1,11 +1,9 @@
-import { GoogleLogin } from "react-google-login";
-
 const Header = ({ user, server }) => {
     return (
         <nav className="light-green lighten-1 !important ">
             <div className="nav-wrapper container ">
                 <a href="#" className="brand-logo ">
-                    Glasses store
+                    Glasses storef
                 </a>
                 <ul
                     id="nav-mobile"
