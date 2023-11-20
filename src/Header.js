@@ -1,6 +1,6 @@
 const Header = ({ user, server }) => {
     return (
-        <nav className="light-green lighten-1 !important ">
+        <nav className="light-green lighten-3 !important ">
             <div className="nav-wrapper container ">
                 <a href="#" className="brand-logo ">
                     Glasses storef
