@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Routes, Route, Link } from "react-router-dom";
 
 import getUser from "./actions/getUser";
+import Cookies from "js-cookie";
 
 import Header from "./Header";
 import PostForm from "./PostForm";
