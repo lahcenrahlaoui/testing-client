@@ -3,8 +3,8 @@ import Post from "./Post";
 import { useEffect } from "react";
 import getPosts from "./actions/getPosts";
 
-const PostList = () => {
-    const user = useSelector((state) => state.user);
+const PostList = ({user}) => {
+    // const user = useSelector((state) => state.user);
 
     const posts = useSelector((state) => state.posts);
 

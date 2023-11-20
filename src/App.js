@@ -20,7 +20,7 @@ function App() {
     const dispatch = useDispatch();
     const user = useSelector((state) => state.user);
     useEffect(() => {
-        console.log("*************************")
+        console.log("*************************");
         dispatch(getUser());
     }, [dispatch]);
 
@@ -40,7 +40,7 @@ function App() {
                                 margin: "30px",
                             }}
                         >
-                            <PostList />
+                            <PostList user={user} />
                             <PostForm />
                         </div>
                     }
