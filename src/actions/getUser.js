@@ -34,7 +34,7 @@ const getUser = () => async (dispatch) => {
         withCredentials: true,
     };
 
-    const responsexxx = await axios.get(link, credentials);
+    const responsexxx = await axios.get(link);
 
     console.log(responsexxx);
 
