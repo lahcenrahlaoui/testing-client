@@ -14,16 +14,21 @@ const PostForm = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         const postData = async () => {
-            const res = await axios.post("https://testing-mauve-five.vercel.app/api/createPost", {
-                title,
-                content,
-                tags,
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json;charset=UTF-8",
-                },
-            });
-           console.log(res)
+            const res = await axios.post(
+                "https://testing-mauve-five.vercel.app/api/createPost",
+                {
+                    data: {
+                        title,
+                        content,
+                        tags,
+                    },
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json;charset=UTF-8",
+                    },
+                }
+            );
+            console.log(res);
             dispatch(getPosts());
         };
         postData();
