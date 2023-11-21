@@ -20,11 +20,6 @@ const PostForm = () => {
                     title,
                     content,
                     tags,
-
-                    headers: {
-                        Accept: "application/json",
-                        "Content-Type": "application/json;charset=UTF-8",
-                    },
                 }
             );
             console.log(res);
