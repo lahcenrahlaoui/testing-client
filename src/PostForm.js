@@ -14,7 +14,7 @@ const PostForm = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         const postData = async () => {
-            const res = await axios.post("/api/createPost", {
+            const res = await axios.post("https://testing-mauve-five.vercel.app/api/createPost", {
                 title,
                 content,
                 tags,
