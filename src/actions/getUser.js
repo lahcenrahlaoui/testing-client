@@ -3,12 +3,6 @@ import { GET_USER } from "../constants/types";
 const getUser = () => async (dispatch) => {
     let response;
 
-    const headers = {
-        headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json;charset=UTF-8",
-        },
-    };
     const credentials = {
         withCredentials: true,
     };
