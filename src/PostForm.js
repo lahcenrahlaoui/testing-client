@@ -23,7 +23,7 @@ const PostForm = () => {
                     "Content-Type": "application/json;charset=UTF-8",
                 },
             });
-           
+           console.log(res)
             dispatch(getPosts());
         };
         postData();
