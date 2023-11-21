@@ -22,9 +22,11 @@ const getUser = () => async (dispatch) => {
 
     // config axios
     const link = `https://server-2nfv.onrender.com/api/current_user`;
+    // const link = `https://finalspaceapi.com/api/v0/character/?limit=2`
     const headers = {
         headers: {
-            "Content-Type": "application/json",
+            Accept: "application/json",
+            "Content-Type": "application/json;charset=UTF-8",
         },
     };
 
@@ -32,23 +34,17 @@ const getUser = () => async (dispatch) => {
         withCredentials: true,
     };
 
-    const responsexxx = await axios
-        .get(link, headers, credentials)
-        .then(() => {
-            console.log("working fine ");
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+    const responsexxx = await axios.get(link, headers, credentials);
 
     console.log(responsexxx);
 
+    console.log("--------------------------response----------------------------------");
     console.log("--------------------------response");
     console.log("--------------------------response");
 
     dispatch({
         type: GET_USER,
-        payload: response.data,
+        payload: responsexxx.data,
     });
 };
 
