@@ -17,11 +17,10 @@ const PostForm = () => {
             const res = await axios.post(
                 "https://testing-mauve-five.vercel.app/api/createPost",
                 {
-                    data: {
-                        title,
-                        content,
-                        tags,
-                    },
+                    title,
+                    content,
+                    tags,
+
                     headers: {
                         Accept: "application/json",
                         "Content-Type": "application/json;charset=UTF-8",
