@@ -25,27 +25,18 @@ export const addPosts =
     async (dispatch) => {
         let response;
         if (process.env.NODE_ENV === "development") {
-            response = await axios.post(
-                `/api/createPost`,
-                // {
-                //     withCredentials: true,
-                // },
-                { title, content, tags }
-            );
-        }
-        else {
+            response = await axios.post(`/api/createPost`, {
+                title,
+                content,
+                tags,
+            });
+        } else {
             response = await axios.post(
                 "https://testing-mauve-five.vercel.app/api/createPost",
                 {
                     withCredentials: true,
                 },
-                {
-                    body: {
-                        title,
-                        content,
-                        tags,
-                    },
-                }
+                { title, content, tags }
             );
         }
 
