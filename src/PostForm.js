@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import getPosts from "./actions/getPosts";
+import { addPosts } from "./actions/getPosts";
 
 const PostForm = () => {
     const [title, setTitle] = useState("");
@@ -13,19 +13,14 @@ const PostForm = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        const postData = async () => {
-            const res = await axios.post(
-                "https://testing-mauve-five.vercel.app/api/createPost",
-                {
-                    title,
-                    content,
-                    tags,
-                }
-            );
-            console.log(res);
-            dispatch(getPosts());
-        };
-        postData();
+
+        dispatch(
+            addPosts({
+                title,
+                content,
+                tags,
+            })
+        );
     };
 
     return user === null ? (
