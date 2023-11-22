@@ -33,21 +33,21 @@ export const addPosts =
                 { title, content, tags }
             );
         }
-        // else {
-        //     response = await axios.post(
-        //         "https://testing-mauve-five.vercel.app/api/createPost",
-        //         {
-        //             withCredentials: true,
-        //         },
-        //         {
-        //             body: {
-        //                 title,
-        //                 content,
-        //                 tags,
-        //             },
-        //         }
-        //     );
-        // }
+        else {
+            response = await axios.post(
+                "https://testing-mauve-five.vercel.app/api/createPost",
+                {
+                    withCredentials: true,
+                },
+                {
+                    body: {
+                        title,
+                        content,
+                        tags,
+                    },
+                }
+            );
+        }
 
         console.log(
             "response+++++++++++++++++++++++++++++++++++++++++++++++++++++++"
